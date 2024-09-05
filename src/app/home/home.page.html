@@ -6,24 +6,8 @@
   </ion-header>
 
   <ion-content>
-    <h1 class="titulo">Registrate aca</h1>
-    <ion-item>
-      <ion-input type="text" label="Nombre" name="nombre" [(ngModel)]="nombre" placeholder="Escribe tu nombre"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" label="Edad" name="edad" placeholder="Escribe tu edad"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" label="Apellido" name="apellido" [(ngModel)]="apellido" placeholder="Escribe tu apellido"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Educacion</ion-label>
-      <ion-select value="Educacion" multiple="true" placeholder="Selecciona tu nivel">
-        <ion-select-option *ngFor="let niv of niveles" value="niv.id">{{niv.nivel}}</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-button (click)="mostrarNombre()" expand="block">
-      Click aca
-    </ion-button>
+
+    <!-- Contenido de nuestra aplicacion -->
+
   </ion-content>
 </ion-app>
