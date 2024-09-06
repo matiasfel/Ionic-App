@@ -1,0 +1,42 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Iniciar sesion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+    <!-- Contenido de nuestra aplicacion -->
+
+    <ion-list>
+      <ion-item>
+        <ion-input 
+          type="email"
+          labelPlacement="floating"
+          name="email"
+          [(ngModel)]="email"
+        >
+          <div slot="label">Correo electronico</div>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+    
+    <ion-list>
+      <ion-item>
+        <ion-input 
+          type="password" 
+          labelPlacement="floating"
+          name="password"
+          [(ngModel)]="password"
+        >
+          <div slot="label">Contraseña</div>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" color="primary" (click)="ingresar()">Enviar</ion-button>
+
+  </ion-content>
+
+</ion-app>
