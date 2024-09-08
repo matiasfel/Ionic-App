@@ -27,20 +27,20 @@ export class LoginPage {
   async errorMessage() {
     const alert = await this.alert.create({
       header: 'Inicio de sesion',
-      message: 'Correo o contraseña erroneos, intenta otra vez.',
+      message: 'Correo o contraseña erroneos, intenta otra vez',
       buttons: ['Aceptar']
     });
 
     await alert.present();
   }
 
-  ingresar() {
+  formAccess() {
     if(this.email ==="admin@gmail.com" && this.password ==="admin"){
-      console.log("Inicio de sesion exitoso")
+      console.log("Success: Inicio de sesion exitoso")
       this.successMessage()
       this.route.navigate(["/home"])
     } else {
-      console.log("Inicio de sesion erroneo")
+      console.log("Error: Correo o contraseña incorrectos")
       this.errorMessage()
     }
 
