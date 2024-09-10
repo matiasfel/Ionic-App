@@ -14,9 +14,14 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/auth/register/register.module').then( m => m.RegisterPageModule)
-  },  {
+  },
+  {
     path: 'password-recovery',
     loadChildren: () => import('./pages/auth/password-recovery/password-recovery.module').then( m => m.PasswordRecoveryPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/dashboard/home/home.module').then( m => m.HomePageModule)
   }
 
 ];

@@ -7,6 +7,7 @@ import { AlertController, ToastController } from '@ionic/angular';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage {
 
   // Datos temporales para el acceso de la aplicación
@@ -32,7 +33,7 @@ export class LoginPage {
 
   async presentErrorAlert(message: string) {
     const alert = await this.alertController.create({
-      header: 'Ha ocurrido un problema..',
+      header: 'Inicio de sesión',
       message: message,
       buttons: ['Aceptar']
     });
@@ -50,10 +51,9 @@ export class LoginPage {
     if (this.email === 'admin@gmail.com' && this.password === 'admin') {
       console.log("SUCCESS: Login has been completed");
       this.presentSuccessToast();
-      // Redirige al usuario después de un pequeño retraso para que pueda ver el toast
       setTimeout(() => {
         this.route.navigate(['/home']);
-      }, 2000);
+      });
     } else {
       console.log("ERROR: Email or password is incorrect");
       this.presentErrorAlert('Correo electrónico o contraseña incorrectos.');
