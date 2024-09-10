@@ -8,12 +8,14 @@
     }
 
 .login-title {
-    text-indent: 15px;
+    text-align: center;
+    margin: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 40px;
 }
 
 ion-button{
-    --color:black;
+    --color:rgb(255, 255, 255);
+    --background: #000000;
 }
