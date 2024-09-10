@@ -1,6 +1,6 @@
 # Ionic-App: StepMeter
 
-Repositorio de nuestra primera aplicación móvil multiplataforma desarrollada con Ionic, Estara diseñada para funcionar en dispositivos móviles iOS y Android.
+Repositorio de nuestra primera aplicación móvil multiplataforma desarrollada con Ionic, la cual estara diseñada para funcionar en dispositivos móviles iOS y Android.
 
 ## Tecnologías Utilizadas
 
