@@ -12,7 +12,7 @@ export class LoginPage {
 
   // Datos temporales para el acceso de la aplicación
 
-  email:string="admin@gmail.com"
+  user:string="admin"
   password:string="admin"
 
   constructor(
@@ -43,16 +43,16 @@ export class LoginPage {
   // Funcion para controlar el acceso a la aplicación
   
   formAccess() {
-    if (!this.email || !this.password) {
+    if (!this.user || !this.password) {
       this.presentErrorAlert('Por favor completa todos los campos.');
       return;
     }
   
-    if (this.email === 'admin@gmail.com' && this.password === 'admin') {
+    if (this.user === 'admin' && this.password === 'admin') {
       console.log("SUCCESS: Login has been completed");
       this.presentSuccessToast();
       setTimeout(() => {
-        this.route.navigate(['/home']);
+/*         this.route.navigate(['/home']); */
       });
     } else {
       console.log("ERROR: Email or password is incorrect");

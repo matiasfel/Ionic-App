@@ -1,27 +1,31 @@
 <ion-app>
   <ion-content class="ion-padding">
     <form (submit)="formAccess()" class="login-form">
-      <h1 class="login-title">StepMeter<ion-icon name="navigate-outline"></ion-icon></h1>
+
+      <h1 class="login-title">StepMeter<ion-icon name="footsteps"></ion-icon></h1>
+      
       <ion-list>
-        <ion-item>
+        <ion-item lines="none" class="inputs">
           <ion-input 
-            type="email"
+            type="user"
             labelPlacement="floating"
-            name="email"
-            [(ngModel)]="email"
+            name="user"
+            id="user"
+            [(ngModel)]="user"
             expand="full"
           >
-            <div slot="label">Correo electrónico</div>
+            <div slot="label">Nombre de usuario</div>
           </ion-input>
         </ion-item>
       </ion-list>
   
       <ion-list>
-        <ion-item>
+        <ion-item lines="none" class="inputs">
           <ion-input 
             type="password"
             labelPlacement="floating"
             name="password"
+            id="password"
             [(ngModel)]="password"
             expand="full"
           >
@@ -29,26 +33,27 @@
           </ion-input>
         </ion-item>
       </ion-list>
-
-      <ion-item lines="none">
-        <ion-button fill="clear" routerLink="/password-recovery" color="secondary">
-          ¿Olvidaste tu contraseña?
-        </ion-button>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-button 
-        fill="clear" 
-        routerLink="/register" 
-        color="secondary">
-          No tengo cuenta.
-        </ion-button>
-      </ion-item>
   
       <ion-button 
         type="submit"
       >
         Enviar
       </ion-button>
+
+        <div class="anchords">
+          <a routerLink="/password-recovery">¿Has olvidado tu contraseña?</a>
+        </div>
+        <div class="anchords">
+          <a routerLink="/register">No tengo cuenta</a>
+        </div>
+
     </form>
   </ion-content>
+
+  <ion-footer>
+    <ion-toolbar class="footer">
+      <p>StepMeter | Todos los derechos reservados</p>
+    </ion-toolbar>
+  </ion-footer>
+  
 </ion-app>
