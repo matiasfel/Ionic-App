@@ -1,5 +1,9 @@
 // Todo el estilado para login.page.html
 
+ion-content {
+    --overflow: hidden; // Desactiva el scroll
+}
+
 .login-form {
     display: flex;
     flex-direction: column;
@@ -8,6 +12,7 @@
     }
 
 .login-title {
+    color: rgb(204, 97, 93);
     text-align: center;
     margin: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +20,34 @@
     font-size: 40px;
 }
 
+.inputs {
+    --background: rgb(241, 241, 241);
+    --border-radius: 15px;
+    margin: 10px;
+}
+
 ion-button{
-    --color:rgb(255, 255, 255);
-    --background: #000000;
+    --color: #fff;
+    --background: #000;
+    --background-activated: rgb(204, 97, 93);
+    margin-top: 10px;
+}
+
+.anchords {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.anchords a {
+    color: rgb(97, 97, 97);
+    text-decoration: none;
+}
+
+.footer {
+    p {
+        opacity: 0.5;
+        text-align: center;
+        margin-top: 15px;
+    }
 }

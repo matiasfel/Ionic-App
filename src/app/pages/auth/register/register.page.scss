@@ -1,0 +1,62 @@
+// Todo el estilado para register.page.html
+
+ion-content {
+  --overflow: hidden; // Desactiva el scroll
+}
+
+ion-toolbar {
+  --background: none;
+}
+
+ion-datetime-button {
+  margin-left: 10px;
+}
+
+ion-button {
+--color: #fff;
+--color-activated: #000;
+--background: #000;
+--background-activated: rgb(141, 255, 198);
+margin-top: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+
+  h1 {
+    color: #000;
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  p {
+    opacity: 0.8;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.inputs {
+    --background: rgb(241, 241, 241);
+    --border-radius: 15px;
+    margin: 10px;
+
+    p {
+      margin-top: 15px;
+  }
+}
+
+.footer {
+  p {
+      opacity: 0.5;
+      text-align: center;
+      margin-top: 15px;
+  }
+}
