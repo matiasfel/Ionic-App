@@ -9,7 +9,7 @@
   </ion-header>
 
   <ion-content [fullscreen]="true" class="ion-padding">
-    <form class="form">
+    <form (submit)="formAccess()" class="form">
 
       <div class="title">
         <h1>Registrate</h1>
@@ -22,7 +22,10 @@
             label="Nombre de usuario" 
             labelPlacement="floating" 
             placeholder="¡Tu alias en StepMeter!" 
-            id="user">
+            type="user"
+            id="user"
+            name="user"
+            [(ngModel)]="user">
           </ion-input>
         </ion-item>
     
@@ -31,7 +34,9 @@
             label="Contraseña" 
             labelPlacement="floating"
             type="password"
-            id="password">
+            id="password"
+            name="password"
+            [(ngModel)]="password">
           </ion-input>
         </ion-item>
     
@@ -40,12 +45,14 @@
             label="Confirma tu contraseña" 
             labelPlacement="floating"
             type="password"
-            id="rePassword">
+            id="rePassword"
+            name="rePassword"
+            [(ngModel)]="rePassword">
           </ion-input>
         </ion-item>
 
         <ion-item lines="none" class="inputs">
-          <p>Fecha de nacimiento</p>
+          <p>Fecha de nacimiento |</p>
           <ion-datetime-button datetime="datetime"></ion-datetime-button>
         
           <ion-modal [keepContentsMounted]="true">
@@ -54,18 +61,11 @@
                 id="datetime"
                 presentation="date"
                 value="2023-11-02T01:22:00"
-                color="success"
-                [formatOptions]="{
-                  date: {
-                    weekday: 'short',
-                    month: 'long',
-                    day: '2-digit',
-                  }
-                }"
+                color="dark"
               ></ion-datetime>
             </ng-template>
           </ion-modal>
-        </ion-item>        
+        </ion-item>   
 
       </ion-list>
     
