@@ -8,6 +8,9 @@ import { AlertController, ToastController, LoadingController } from '@ionic/angu
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
+
+  /* Ajustes para el usuario (prox en base de datos) */
+
   user: string = 'admin';
   password: string = 'admin';
 
